@@ -1,0 +1,1265 @@
+/*
+    Based on...
+    Theme Name:L U C Y
+    Theme URI:
+    Author: ThemeWagonAuthor 
+    URI: http://themewagon.com/
+    Description: One page app landing HTML 5 CSS 3 template powered by Bootstrap 3.Version:1.0.1
+*/
+
+/*
+    Original theme modified by Amanda Edling URL: digitalmuch.com
+    Description: Changed from a product site to gallery site with sections removed and new sections added.
+*/
+
+/*** 
+
+Table of Contents:
+-----------------------------------------------------------------------------* 
+    01 - General
+    02 - Side Menu
+    03 - Preloader
+    04 - Header
+    05 - Banner
+    06 - Lighting & Design
+    07 - UX Design
+    08 - Website Design
+    09 - Specialities
+    10 - Design & Animation
+    11 - About Section
+    12 - Contact
+    13 - Footer Section
+    14 - Responsive Styles
+-----------------------------------------------------------------------------*
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 01 - General 
+/////////////////////////////////////////////////////////////////////*/
+
+* {
+    outline:0 !important
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    color:#777;
+    line-height:28px;
+}
+h1,h2,h3 {
+    text-transform:uppercase;
+    color:#444;
+    font-weight:300;
+}
+h3 {
+    line-height:1.2;
+}
+a {
+    text-decoration:none;
+    transition:all 0.3s ease-out;
+    position:relative;
+    padding:.5em;
+    margin:-.5em;
+}
+a:hover,a:active,a:focus {
+    color:#405162;
+    text-decoration:none;
+}
+ul {
+    margin:0;
+    padding:0px;
+    list-style:none;
+}
+.img_res {
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:100%;
+}
+.icon-margin{
+    margin-left: 15px;
+}
+.block-title {
+    font-weight:300;
+    font-family:'Roboto Condensed',sans-serif;
+    font-size:3em;
+    padding:0 40px;
+    margin:0;
+    line-height:1.6;
+    display:inline-block;
+    position:relative;
+    text-transform:uppercase;
+}
+.block-title.title-light,.block-title.title-light span {
+    color:#fff;
+}
+.block {
+    /*padding:80px 0;*/
+    overflow:hidden;
+    position:relative;
+    padding-bottom: 6em;
+}
+.overflow-visible{
+    overflow:visible;
+}
+.title-box {
+    text-align:center;
+    margin-bottom:80px;
+}
+.title-box.text-left {
+    text-align:left;
+}
+.section-title{
+    text-transform: capitalize;
+    color: #444444;
+    font-size: 30px;
+}
+.bb-top-left {
+    position:absolute;
+    width:15px;
+    height:15px;
+    top:0;
+    left:0;
+    border-top:1px solid;
+    border-left:1px solid;
+}
+.title-under-line-top{
+    width: 100px;
+    border-top:1px solid #FF4800;
+    margin-bottom: 0px;
+}
+.title-under-line-bottom{
+    width: 80px;
+    border-top:1px solid #FF4800;
+    margin-top: 5px;
+}
+span.bb-bottom-left {
+    position:absolute;
+    width:15px;
+    height:15px;
+    bottom:0;
+    left:0;
+    border-bottom:1px solid;
+    border-left:1px solid;
+}
+span.bb-top-right {
+    position:absolute;
+    width:15px;
+    height:15px;
+    top:0;
+    right:0;
+    border-top:1px solid;
+    border-right:1px solid;
+}
+span.bb-bottom-right {
+    position:absolute;
+    width:15px;
+    height:15px;
+    bottom:0;
+    right:0;
+    border-bottom:1px solid;
+    border-right:1px solid;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+.col-md-offset-1point5{
+    margin-left: 12.5%;
+}
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+    border-radius: 0;
+    opacity: 0.3;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 02 - Side Menu
+/////////////////////////////////////////////////////////////////////*/
+
+#sidebar-wrapper {
+    z-index:1000;
+    position:fixed;
+    right:0;
+    width:260px;
+    height:100%;
+    margin-right:-260px;
+    overflow-x: hidden;
+    overflow-y:auto;
+    background:#0C5B69 url(../img/stripBG.png);
+    z-index:99999999;
+    -webkit-transition:all 0.4s ease 0s;
+    -moz-transition:all 0.4s ease 0s;
+    -ms-transition:all 0.4s ease 0s;
+    -o-transition:all 0.4s ease 0s;
+    transition:all 0.4s ease 0s;
+}
+.sidebar-nav {
+    position:absolute;
+    width:250px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.sidebar-nav li {
+    text-indent:20px;
+    line-height:40px;
+    border-bottom:1px dotted rgba(255,255,255,0.27);
+}
+.sidebar-nav li a {
+    display:block;
+    text-decoration:none;
+    color:#FFF;
+    font-size:16px;
+    padding:15px 15px;
+}
+.sidebar-nav li a:hover {
+    text-decoration:none;
+    color:rgba(255, 247, 0, 0.3);
+}
+.sidebar-nav li a:active,.sidebar-nav li a:focus {
+    text-decoration:none;
+}
+.sidebar-nav>.sidebar-brand {
+    height:55px;
+    font-size:18px;
+    line-height:55px;
+}
+.sidebar-nav>.sidebar-brand a {
+    color:#999;
+}
+.sidebar-nav>.sidebar-brand a:hover {
+    color:#fff;
+    background:none;
+}
+#sidebar-wrapper.active {
+    right:250px;
+    width:260px;
+    -webkit-transition:all 0.4s ease 0s;
+    -moz-transition:all 0.4s ease 0s;
+    -ms-transition:all 0.4s ease 0s;
+    -o-transition:all 0.4s ease 0s;
+    transition:all 0.4s ease 0s;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.49);
+}
+.toggle {
+    margin:5px 5px 0 0;
+}
+.close-btn {
+    display:block;
+    color:#FFFFFF;
+    font-size:1em;
+    margin:0px 0 0 0;
+    padding:2px 0 0 0;
+    line-height:28px;
+    text-align:right;
+    width:100%;
+    padding-right:25px;
+    background:rgba(0,0,0,0.2);
+}
+.close-btn:hover {
+    color: rgba(255, 255, 255, 0.3);
+}
+.close-btn i {
+    font-size:1.8em;
+    float:right;
+    margin-left: 10px;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 03 - Preloader
+/////////////////////////////////////////////////////////////////////*/
+
+#preloader {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:99999999999;
+    width:100%;
+    height:100%;
+    overflow:visible;
+    background: #fff url('../img/preloader.gif') no-repeat center center;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 04 - Header
+/////////////////////////////////////////////////////////////////////*/
+
+.sticky {
+    position:fixed;
+    width:100%;
+    background:transparent;
+    padding:30px 0px;
+    transition:all 0.5s;
+    z-index:99997;
+}
+
+.fixed {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:#00333B;
+    background-image:url(../img/stripBG.png);
+    padding:0px;
+}
+.logo {
+    color:#fff;
+    font-size:2.5em;
+    line-height:1.6;
+}
+.sticky.fixed .logo img{
+    width: 80px;
+}
+#logo_menu {
+    padding:5px 0px;
+}
+#menu-toggle {
+    z-index:1;
+    font-size:35px;
+    float:right;
+    background-color: transparent !important;
+    border:1px solid #fff;
+    color:#fff;
+    margin:20px 0px;
+    padding:2px 10px;
+    line-height:0;
+}
+.sticky.fixed #menu-toggle{
+    margin:0;
+}
+.sticky.fixed .logo{
+    line-height:1;
+}
+.store-btn-container {
+    padding-top:15px;
+}
+.store-btn:hover,#menu-toggle:hover {
+    background:#405162;
+    border-color:#405162;
+    color: #fff;
+}
+.screen{
+    margin-bottom: 2em;
+}
+@media all and (max-width:991px){
+    #menu-toggle{
+        margin:0;
+    }
+    .logo{
+        line-height:1;
+    }
+    .logo img{
+        width: 80px;
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 05 - Banner
+/////////////////////////////////////////////////////////////////////*/
+
+#banner {
+    background-size:cover;
+    padding-top:80px;
+    background-attachment:fixed;
+    position:relative;
+    background: #000;
+    padding-bottom: 6em;
+}
+.banner-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+#banner lighting {
+    position:absolute;
+    top:0;
+    left:0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.headings {
+    padding:25% 0 28% 0;
+    color:#fff;
+}
+.headings h1 {
+    font-size:40px;
+    font-weight:300;
+    margin-bottom:20px;
+    color:white;
+}
+.headings p {
+    font-size:18px;
+    font-weight:100;
+    margin-bottom:40px;
+    letter-spacing:0.5px;
+    line-height:28px;
+}
+.hand-container {
+    padding-top: 25%;
+}
+
+.iphone-hand {
+    padding:20px 30px 0px 30px;
+}
+.btn-store i {
+    font-size:45px;
+    float:left;
+    margin:6px 15px -5px 15px;
+}
+.slidedown {
+    font-size:50px;
+    color:#fff;
+    position:absolute;
+    bottom:0%;
+    left:50%;
+    margin-left: -40.5px;
+    z-index:99;
+    cursor:pointer;
+}
+@media (max-width:1199px) {
+    .hand-container {
+        margin-top: 175px;
+    }
+}
+@media (max-width: 767px) {
+}
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 06.1 -Lighting & 3D
+/////////////////////////////////////////////////////////////////////*/
+
+#section-lighting-title {
+    margin-top: 4em;
+}
+.concept-art {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.caption-content {
+    margin-top: 2em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+}
+iframe {
+    overflow: hidden;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+#lighting,#specialities {
+    background-color:#fff;
+    padding-bottom: 100px; 
+}
+.hidden-xs.hidden-sm{
+    z-index: 999;
+}
+.embed-responsive {
+    margin-bottom:25px;
+}
+.italic {
+    font-style: italic;
+}
+.lighting-area-wraper{
+    position: relative;
+    margin-top: 40px;
+    /*margin-left: 2em;*/
+    /*margin-right: 2em;*/
+}
+.forward-div{
+    z-index:3;
+}
+.design-animation {
+    color: #FF4800;
+    text-transform: uppercase;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 07 - UX Design
+/////////////////////////////////////////////////////////////////////*/
+
+#section-ux-title {
+    margin-top: 4em;
+}
+#uxdesign{
+    background-image: url(../img/design-bkgrd.png);
+    background-size: cover;
+    color: #fff;
+}
+#uxdesign .section-title{
+    color:#fff;
+}
+#concept-art-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+}
+.pad-left-85{
+    padding-left: 85px;
+}
+.pad-right-85{
+    padding-right: 85px;
+}
+.margin-top-50{
+    margin-top: 50px;
+}
+.item-list-big{
+    /*margin-top: 60px;*/
+}
+.item-list-right li {
+    position:relative;
+    text-align:left;
+}
+
+.item-list-left li {
+    padding:0 0px 20px 60px;
+    position:relative;
+    text-align:left;
+}
+.item-list-left li p,.item-list-right li p{
+    font-size: 13px;
+    font-weight: 400;
+}
+.item-list-right h3,.item-list-left h3 {
+    font-weight:400;
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.item-list-right.item-list-big li {
+    padding: 0 0px 35px 25px;
+}
+.item-list-left.item-list-big li {
+    padding: 0 25px 35px 0px;
+}
+.item-list-big li i {
+    color: #fff;
+}
+
+.item-list-right li:last-child,.item-list-left li:last-child {
+    padding-bottom:0;
+}
+.margin-left{
+    margin-left: 15px;
+}
+.margin-right{
+    margin-right: 15px;
+}
+#uxdesign .screen {
+    max-width:100%;
+    height:auto;
+}
+@media (max-width:1200px) and (min-width:767px) {
+    #uxdesign i {
+        /*display:none;*/
+    }
+    .item-list-right.item-list-big li,.item-list-left.item-list-big li {
+        /*padding:0 0px 40px 0px;*/
+    }
+}
+@media (max-width:992px) and (min-width:767px) {
+    .item-list-right.item-list-big li,.item-list-left.item-list-big li {
+        font-size:14px;
+    }
+    .item-list-right h3,.item-list-left h3 {
+        font-size:22px;
+    }
+    .item-list-right li:last-child,.item-list-left li:last-child {
+        padding-bottom:0;
+    }
+}
+@media all and (max-width:767px) {
+    .item-list-right.item-list-big li {
+        padding:0 0px 60px 80px;
+        text-align:left;
+    }
+    .item-list-right li i {
+        right:auto;
+        left:0;
+    }
+    .item-list-left li:last-child {
+        margin-bottom:60px;
+    }
+}
+.animation-box {
+    display:inline-block;
+    position:relative;
+    z-index: 99;
+}
+@-webkit-keyframes highlight-left {
+    0% {
+        opacity:0;
+        top:100%;
+        -webkit-transform:scale(0);
+    }
+    70% {
+        opacity:1;
+        -webkit-transform:scale(1);
+    }
+    100% {
+        opacity:0;
+        top:0;
+        -webkit-transform:scale(0);
+    }
+}
+@keyframes highlight-left {
+    0% {
+        opacity:0;
+        top:100%;
+        transform:scale(0);
+    }
+    70% {
+        opacity:1;
+        transform:scale(1);
+    }
+    100% {
+        opacity:0;
+        top:0;
+        transform:scale(0);
+    }
+}
+.highlight-left {
+    position:absolute;
+    animation:highlight-left 2s ease-in 0s infinite;
+    -webkit-animation:highlight-left 2s ease-in 0s infinite;
+    left:-5px;
+    margin-top:-100px;
+}
+@-webkit-keyframes highlight-right {
+    0% {
+        opacity:0;
+        top:0;
+        -webkit-transform:scale(0)
+    }
+    70% {
+        opacity:1;
+        -webkit-transform:scale(1)
+    }
+    100% {
+        opacity:0;
+        top:100%;
+        -webkit-transform:scale(0)
+    }
+}
+@keyframes highlight-right {
+    0% {
+        opacity:0;
+        top:0;
+        transform:scale(0)
+    }
+    70% {
+        opacity:1;
+        transform:scale(1)
+    }
+    100% {
+        opacity:0;
+        top:100%;
+        transform:scale(0)
+    }
+}
+.highlight-right {
+    position:absolute;
+    animation:highlight-right 2s ease-in 0s infinite;
+    -webkit-animation:highlight-right 2s ease-in 0s infinite;
+    right:-5px;
+    margin-top: -100px;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 08 - Website Design
+/////////////////////////////////////////////////////////////////////*/
+
+#section-website-title {
+    margin-top: 6em;
+}
+.website-image {
+    max-width:350px;
+    margin:auto;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 09 - Speciality
+/////////////////////////////////////////////////////////////////////*/
+
+.sprite-animation {
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 56%;
+    height: 380px;
+}
+h3.card-title {
+    color:#FF4800;
+    font-weight: bold;
+}
+#specialities {
+    background-color:#fff;
+    padding-bottom: 100px;
+}
+#section-specialities-title {
+    margin-top: 4em;
+}
+.feature-box {
+    padding:30px 0px;
+    text-align:center;
+    max-width:360px;
+    margin:0 auto;
+}
+.feature-box i {
+    font-size:35px;
+    line-height:0 !important;
+    margin:0;
+    padding:0;
+    color:#41A1E1;
+}
+.feature-box p {
+    padding:0px 20px;
+}
+.feature-box h2 {
+    margin:0;
+    padding:20px 0px;
+    font-weight: 300;
+}
+.card-content h3{
+    color#313131;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.special-card-wraper{
+    margin-top: 0px;
+}
+.special-card{
+    background-color: #fff;
+    padding: 50px 0;
+    transition-duration: 0.5s;
+}
+.special-card:hover{
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.card-content p{
+    color#969595;
+    font-size: 13px;
+}
+.card-icon-box{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    left: 0;
+    right: 0;
+}
+.card-icon-box-inner{
+    width:100%;
+    height:100%; 
+    position:relative;
+    display:table;
+    border-radius: 50%;
+    /*border: 1px solid;*/
+}
+.card-icon-box .card-icon-box-inner i{
+    display: table-cell;
+    vertical-align: middle;
+    color: #000;
+    font-size: 40px;
+}
+.special-card-outer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 10 - Design & Animation
+/////////////////////////////////////////////////////////////////////*/
+
+#animation {
+    background-color: rgba(206, 206, 206, 0.36);   
+    background-size: cover;
+    color: #444444;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-bottom: 8em;
+    padding-top: 6em;
+}
+#animation .section-title{
+    color:#444444;
+}
+.animation-text {
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 4em;
+}
+.feature-list {
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+.feature-list li {
+    margin-bottom:26px;
+}
+.feature-list li i {
+    margin-right:10px;
+    font-size:1.2em;
+}
+.test-2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+}
+.icon-test {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+span.x {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.x {
+    background: #FF4800;
+    border-radius: 50%;
+}
+
+.margin-top-right{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.margin-top-left{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.mb50 {
+    margin-bottom:50px;
+}
+#specialities-right-image {
+    background-color: #fff;
+}
+.list-content{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.list-content .feature-list li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.list-content .feature-list li i{
+}
+.list-content p{
+    font-size: 13px;
+    color: #969595;
+}
+
+.bottom-img-wraper{
+    margin-top: 50px;
+    z-index: 1;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 11 - About Section
+/////////////////////////////////////////////////////////////////////*/
+.about-art {
+    max-width: 350px;
+    height: auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+#team{
+    padding-top: 150px;
+    padding-bottom: 140px;
+}
+.border-img {
+    position:relative;
+}
+.border-img .border {
+    position:absolute;
+    border:30px solid #fff;
+    top:-1px;
+    left:-1px;
+    right:-1px;
+    bottom:-1px;
+    transition:border 0.4s;
+    border-radius:100%;
+}
+.team-member:hover .border-img .border {
+    border-width:0px;
+}
+.border-img img {
+    border-radius:100%;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 12 - Contact
+/////////////////////////////////////////////////////////////////////*/
+
+#about {
+    background-color: #fff;
+    margin-bottom: 8em;
+}
+#review {
+    text-align:center;
+    color:#fff;
+    margin-top: 100px;
+}
+.review-star {
+    font-size:30px;
+    margin:10px 0;
+}
+.client-pic {
+    padding: 0em 2em;
+    width: 234px;
+    margin: 0 auto;
+}
+.client-pic img {
+    border-radius:50%;
+    border:15px solid white;
+}
+.review-desc {
+    font-style:italic;
+    letter-spacing:0.5px;
+    color: #969595;
+    font-size: 18px;
+}
+.about-date{
+    color:#b9b9b9;
+    font-size: 13px;
+}
+#about .block-title {
+    color:#fff;
+}
+#about .block-title span {
+    border-color: #fff;
+}
+.review-star{
+    color: #444444;
+}
+p.about-name {
+    font-size: 1.5em;
+    color: #fff;
+    display: inline-block;
+    padding-top: 2em;
+    padding-bottom: 5px;
+    font-weight: 400;
+    margin-top: 50px;
+    color: #444444;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 12 - Contact
+/////////////////////////////////////////////////////////////////////*/
+
+.contact-introductory-text{
+    font-size: 13px;
+    margin-bottom:50px;
+}
+.height-50{
+    height: 50px;
+    margin-bottom: 15px;
+}
+.form-control{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 6px 20px;
+}
+.btn-contact{
+    text-transform: uppercase;
+}
+.submit-btn-wraper{
+    margin-top: 30px;
+}
+textarea.form-control{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 115px;
+    padding: 13px 22px;
+}
+input[type="text"], textarea {
+outline: none;
+box-shadow:none !important;
+}
+.address-list {
+    list-style:none;
+    display:table;
+}
+
+.address-list li i {
+    display:table-cell;
+    width:60px;
+    font-size:3em;
+}
+.address-list li span {
+    padding:0px 0px 0px 20px;
+    display:table-cell;
+    vertical-align:middle;
+}
+.mailbox .container {
+    margin-top:225px;
+    margin-bottom:0px;
+}
+#contactForm input,#contactForm textarea {
+    border-radius:0px;
+    box-shadow:none;
+    border:2px solid #C2C2C2;
+    font-size:18px;
+}
+#contactForm input:active,#contactForm textarea:active,#contactForm input:hover,#contactForm textarea:hover {
+    border:2px solid #41A1E1;
+}
+#contactForm .form-control {
+    padding:20px;
+    height:auto;
+}
+#contactForm .form-group {
+    margin-bottom:25px;
+}
+#contactForm #message {
+    height:258px;
+    padding-bottom:40px;
+}
+.contact-submit {
+    width:160px;
+    background:#fff;
+    color:#41A1E1;
+    border:2px solid #41A1E1;
+    font-size:46px;
+    padding:0;
+    margin: -40px auto 0;
+    display: block;
+}
+.contact-submit:hover {
+    background:#41A1E1;
+    color:#fff;
+}
+#contact {
+    position:relative;
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 135px;
+}
+.contact-wrap {
+    position:absolute;
+    z-index:9999;
+    color:#fff;
+    width:100%;
+    top:50px;
+}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+    color:#6ecba9;
+}
+input:-moz-placeholder,textarea:-moz-placeholder {
+    color: #6ecba9;
+}
+
+/*///////////////////////////////////////////////////////////////////// 
+// 16 - Footer Section
+/////////////////////////////////////////////////////////////////////*/
+
+
+#footer {
+    background:#000;
+    color:white;
+    padding:110px 0;
+}
+.copyright {
+    margin-top:25px;
+    font-size: 12px;
+    font-weight: 300;
+
+}
+.text-green{
+    color:#15cc9a;
+}
+ul.social-icons i {
+    color:white;
+    border-radius:100%;
+    display:block;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+}
+ul.social-icons li a {
+    display:block;
+}
+.footer-logo h1 {
+    color: white;
+}
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 17 - Responsive Styles
+/////////////////////////////////////////////////////////////////////*/
+
+
+@media all and (max-width:1340px) and (min-width:1170px;
+) {
+    .address-list li {
+        font-size:18px;
+    }
+    .address-list li i {
+        width:60px;
+        height:60px;
+        font-size: 34px;
+    }
+}
+
+@media all and (min-width:992px) {
+    #animation {
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+    .animation-text {
+        padding-top: 0em;
+    }    
+    #section-lighting-title {
+        margin-top: 10em;
+    }
+    #section-ux-title {
+        margin-top: 0em;    
+    }
+    .concept-art {
+        margin-top: 30px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 60%;
+        height: auto;
+    }
+    #banner{
+        overflow: visible;
+        height: 865px;
+    }
+    .lighting-caption{
+        position: absolute;
+        /*background-color: #fff;*/
+        height: 100%;
+        z-index: 1;
+        top:90px;
+    }
+    #uxdesign{
+        overflow: visible;
+        height: 914px;
+        padding-top: 150px;
+    }
+    .bottom-img-wraper{
+        display: block;
+    }
+    #website-left-images {
+        height: 1000px;
+        overflow: visible;
+        padding-top: 40px;
+    }
+    
+    .sprite-animation { 
+        width: 46%;
+    }
+
+}
+@media all and (max-width:1170px) and (min-width:992px) {
+    .address-list {
+        padding:200px 0px 70px 0px;
+    }
+    .mailbox .container {
+        margin-top:100px;
+        height: auto;
+    }
+    .address-list {
+        padding:0;
+    }
+    .address-list li {
+        font-size:16px;
+        padding:1em;
+        display:inline-block;
+    }
+    .address-list li i {
+        display:table-cell;
+        line-height:42px;
+        width:42px;
+        height:40px;
+        font-size: 18px;
+    }
+}
+
+@media all and (min-width:1170px) {
+    .mailbox .container {
+        margin-top:130px;
+        margin-bottom: 0px;
+    }
+}
+
+@media all and (max-width:992px) {
+    .headings {
+        text-align:center;
+        padding:10% 0 12% 0;
+    }
+    .block-title {
+        font-size: 2.8em;
+    }
+    .col-md-offset-1point5{
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width:767px) {
+    .headings h1 {
+        font-size:40px;
+    }
+    .block-title {
+        font-size:1.8em;
+        font-weight:500;
+    }
+    .website-image {
+        margin-bottom:40px;
+    }
+    .title-box {
+        margin-bottom:40px;
+    }
+    .title-box.text-left {
+        text-align:center;
+    }
+    .block {
+        /*padding:60px 0;*/
+    }
+    #subscribe {
+        border-width:15px;
+    }
+    .btn-custom {
+        padding: 16px 5px !important;
+    }
+    .mailchimp input[type="email"] {
+        font-size: 16px;
+    }
+    .address-list {
+        margin: 0 auto 20px;
+    }
+    .sprite-animation { 
+        width: 60%;
+    }
+}
+
+@media all and (max-width:480px) {
+    .btn-custom {
+        padding: 5px 0px;
+    }
+    .sprite-animation { 
+        width: 100%;
+    }
+}
