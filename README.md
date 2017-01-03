@@ -1,6 +1,6 @@
 # digitamuch
 
-*Original theme modified by Amanda Edling [Digitalmuch](http://digitalmuch.com)
+*Original theme modified by Amanda Edling [Digitalmuch](http://digitalmuch.com)*
 
 *Based on...
 Theme Name:L U C Y
